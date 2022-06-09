@@ -1,5 +1,6 @@
 # Orange-Image-Classification-CNN
 This repository contains procedures for reading and processing orange images data using deep learning-cnn.
+Deep Learning, Convolutional Neural Network, Keras, R.
 
 **K-Fold Cross Validation**
 
