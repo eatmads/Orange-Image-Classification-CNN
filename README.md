@@ -9,8 +9,8 @@ This repository contains procedures for reading and processing orange images dat
 **Model**
 
 ![V - Permodelan CNN 2](https://user-images.githubusercontent.com/37369728/172873464-125b82f4-460e-445a-9180-04585feb7fb8.png)
-<img width="313" alt="image" src="https://user-images.githubusercontent.com/37369728/172872873-7bea5dad-1099-4bd5-8209-d9d8488a56c3.png">
-<img width="312" alt="image" src="https://user-images.githubusercontent.com/37369728/172873329-12d64945-3e23-4308-bdd3-6e380780946d.png">
+<img width="309" alt="image" src="https://user-images.githubusercontent.com/37369728/172876986-1b283cde-aed3-45db-82d6-2ba039063299.png">
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/37369728/172876824-59bbf932-2029-4c39-a436-cec10bd83cf7.png">
 
 
 **Result of Training with ReLU**
@@ -27,5 +27,5 @@ This repository contains procedures for reading and processing orange images dat
 
 
 
-You can read the paper on this link:
+You can read the paper:
 _https://iopscience.iop.org/article/10.1088/1757-899X/803/1/012020/meta_
