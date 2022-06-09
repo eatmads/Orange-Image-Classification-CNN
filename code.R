@@ -1,10 +1,8 @@
-#before start do (RConsole) : options(expressions=500000), 
-# options(max.print=1000000)
-############################################################
 library(keras)
 library(tensorflow)
 library(EBImage)
 
+#read the data
 setwd('D://Tugas Akhir')
 save_in <- ("D://Tugas Akhir Run1000/")
 
@@ -29,7 +27,9 @@ for(i in 1:length(images))
     error = function(e){print(e)})
 }
 
+#set the data
 setwd("D://Tugas Akhir Run1000")
+
 # Read Images
 images <- list.files()
 images
@@ -55,7 +55,6 @@ test <- list_of_images[c(41:80, 241:280, 441:480, 641:680, 841:880)]
 test
 display(test[[1]])
 
-
 par(mfrow = c(10,10))
 for (i in 1:600) plot(train[[i]])
 
@@ -74,7 +73,6 @@ test <- combine(test)
 str(test)
 y <- tile(test, 10)
 display(y, title = 'test')
-
 
 # Reorder dimension
 train <- aperm(train, c(4,1,2,3))
@@ -144,7 +142,7 @@ model %>% evaluate(train, trainLabels)
 pred <- model %>% predict_classes(train)
 table(Predicted = pred, Actual = trainy)
 prob <- model %>% predict_proba(train)
-colnames(prob)<- c('Belum Matang','Bagus Grid 1','Bagus Grid 2','Busuk','Rusak')
+colnames(prob)<- c('Immature','Grid 1','Grid 2','Rotten','Damaged')
 cbind(prob, Predicted_class = pred, Actual = trainy)
 
 
@@ -153,7 +151,7 @@ model %>% evaluate(test, testLabels)
 pred <- model %>% predict_classes(test)
 table(Predicted = pred, Actual = testy)
 prob <- model %>% predict_proba(test)
-colnames(prob)<- c('Belum Matang','Bagus Grid 1','Bagus Grid 2','Busuk','Rusak')
+colnames(prob)<- c('Immature','Grid 1','Grid 2','Rotten','Damaged')
 cbind(prob, Predicted_class = pred, Actual = testy)
 
 
@@ -195,6 +193,6 @@ model %>% evaluate(Uji, testLabels)
 table(Predicted = pred, Actual = testy)
 prob <- model %>% predict_proba(Uji)
 prob
-colnames(prob)<- c('Belum Matang','Bagus Grid 1','Bagus Grid 2','Busuk','Rusak')
+colnames(prob)<- c('Immature','Grid 1','Grid 2','Rotten','Damaged')
 cbind(prob, Predicted_class = pred, Actual = testy)
 
